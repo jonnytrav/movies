@@ -1,0 +1,16 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "SPA displaying some React and routing skills.",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "author": "jon traverso",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
