@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const MovieDetails = ({ movie }) => {
-  console.log("movie =>", movie);
+  // console.log("movie =>", props);
   const { title, director, metascore, stars, id } = movie;
-  if (!movie) {
+
+  if (!title) {
     return null;
   } else {
     return (
       <div className="movie-card">
-        <Link to={`/movies/${id}`} className="movie-title ">
+        <Link to={`/movie/${id}`} className="movie-title ">
           {title}
         </Link>
         <div className="movie-director">
@@ -20,11 +21,14 @@ const MovieDetails = ({ movie }) => {
         </div>
         <h3>Actors</h3>
 
-        {stars.map(star => (
-          <div key={star} className="movie-star">
-            {star}
-          </div>
-        ))}
+        {stars.map(star => {
+          console.log("star", star);
+          return (
+            <div key={star} className="movie-star">
+              {star}
+            </div>
+          );
+        })}
       </div>
     );
   }

@@ -4,18 +4,10 @@ import MovieList from "./components/Main-Movie-List.js";
 import SavedList from "./components/Saved-list.js";
 
 import "./App.css";
-// import Dummy from "./components/dummy-header.js";
+import MovieDetails from "./components/MovieDetails.js";
 
 const App = () => {
-  const [savedMovies, saveMovie] = useState([
-    {
-      id: 0,
-      title: "The Godfather",
-      director: "Francis Ford Coppola",
-      metascore: 100,
-      stars: ["Marlon Brando", "Al Pacino", "Robert Duvall"]
-    }
-  ]);
+  const [savedMovies, saveMovie] = useState([]);
 
   const addToSavedList = movie => {
     if (savedMovies.includes(movie)) {
@@ -39,15 +31,20 @@ const App = () => {
           );
         }}
       />
-      <MovieList />
-      {/* <Route exact path="/" component={MovieList} /> */}
-      {/* <Route
+      <Route
         exact
         path="/"
         render={props => {
           return <MovieList {...props} />;
         }}
-      /> */}
+      />
+      {/* <Route exact path="/" component={MovieList} /> */}
+      <Route
+        path="/movie/:id"
+        render={props => {
+          return <MovieDetails {...props} addToSaved={addToSavedList} />;
+        }}
+      />
     </div>
   );
 
