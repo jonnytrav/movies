@@ -5,6 +5,7 @@ import SavedList from "./components/Saved-list.js";
 
 import "./App.css";
 import MovieDetails from "./components/MovieDetails.js";
+import MoviePageComponent from "./components/MoviePage.js";
 
 const App = () => {
   const [savedMovies, saveMovie] = useState([]);
@@ -38,11 +39,10 @@ const App = () => {
           return <MovieList {...props} />;
         }}
       />
-      {/* <Route exact path="/" component={MovieList} /> */}
       <Route
         path="/movie/:id"
         render={props => {
-          return <MovieDetails {...props} addToSaved={addToSavedList} />;
+          return <MoviePageComponent {...props} addToSaved={addToSavedList} />;
         }}
       />
     </div>
