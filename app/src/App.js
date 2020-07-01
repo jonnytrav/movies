@@ -8,18 +8,22 @@ import MovieDetails from "./components/MovieDetails.js";
 import MoviePageComponent from "./components/MoviePage.js";
 
 const App = () => {
-  const [savedMovies, saveMovie] = useState([]);
+  const [savedMovies, saveNewMovie] = useState([]);
 
-  const addToSavedList = movie => {
-    if (savedMovies.includes(movie)) {
-      console.log("it DOES include this movie");
-      return;
-    } else {
-      const newSavedList = [movie, ...savedMovies];
-      console.log(savedMovies.includes(movie));
-      saveMovie(newSavedList);
-      // saveMovie([...savedMovies, movie]);
-    }
+  // const addToSavedList = movie => {
+  //   if (savedMovies.includes(movie)) {
+  //     console.log("it DOES include this movie");
+  //     return;
+  //   } else {
+  //     const newSavedList = [movie, ...savedMovies];
+  //     console.log(savedMovies.includes(movie));
+  //     saveMovie(newSavedList);
+  //     // saveMovie([...savedMovies, movie]);
+  //   }
+  // };
+
+  const saveMovie = movie => {
+    saveNewMovie(savedMovies => [...savedMovies, movie]);
   };
 
   const Wrapper = () => (
@@ -27,13 +31,7 @@ const App = () => {
       <Route
         path="/"
         render={props => {
-          return (
-            <SavedList
-              {...props}
-              list={savedMovies}
-              addToSavedList={addToSavedList}
-            />
-          );
+          return <SavedList {...props} list={savedMovies} />;
         }}
       />
       <Route
@@ -49,7 +47,7 @@ const App = () => {
           return (
             <MoviePageComponent
               {...props}
-              addToSaved={addToSavedList}
+              saveMovie={saveMovie}
               savedMovies={savedMovies}
             />
           );
