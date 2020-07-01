@@ -23,6 +23,14 @@ const MoviePageComponent = props => {
       });
   };
 
+  const saveMovie = movieToSave => {
+    if (props.savedMovies.includes(movieToSave)) {
+      return;
+    } else {
+      props.addToSaved(movieToSave);
+    }
+  };
+
   // *********** FOR DEBUGGING ****************
 
   useEffect(() => {
@@ -50,6 +58,9 @@ const MoviePageComponent = props => {
         <div>
           <StarList stars={stars} />
         </div>
+      </div>
+      <div>
+        <button onClick={() => saveMovie(movie)}>Save</button>
       </div>
     </div>
   );

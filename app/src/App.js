@@ -12,9 +12,13 @@ const App = () => {
 
   const addToSavedList = movie => {
     if (savedMovies.includes(movie)) {
+      console.log("it DOES include this movie");
       return;
     } else {
-      saveMovie([...savedMovies, movie]);
+      const newSavedList = [movie, ...savedMovies];
+      console.log(savedMovies.includes(movie));
+      saveMovie(newSavedList);
+      // saveMovie([...savedMovies, movie]);
     }
   };
 
@@ -42,7 +46,13 @@ const App = () => {
       <Route
         path="/movie/:id"
         render={props => {
-          return <MoviePageComponent {...props} addToSaved={addToSavedList} />;
+          return (
+            <MoviePageComponent
+              {...props}
+              addToSaved={addToSavedList}
+              savedMovies={savedMovies}
+            />
+          );
         }}
       />
     </div>
