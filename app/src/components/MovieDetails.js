@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import "../index.css";
 
 const MovieDetails = ({ movie }) => {
-  // console.log("movie =>", props);
   const { title, director, metascore, stars, id } = movie;
 
   if (!title) {

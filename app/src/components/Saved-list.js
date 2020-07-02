@@ -13,9 +13,9 @@ const SavedList = props => {
         ))}
       </div>
       <div className="home-button-container">
-        <Link to="/" className="home-button">
-          Home
-        </Link>
+        <div className="home-button">
+          <Link to="/">Home</Link>
+        </div>
       </div>
     </div>
   );
