@@ -21,9 +21,9 @@ const MovieList = () => {
     );
   } else {
     return (
-      <div>
+      <div className="movie-details-container">
         {movies.map(movie => (
-          <div>
+          <div className="movie-details-individual-container">
             <MovieDetails movie={movie} key={movie.id} />
           </div>
         ))}

@@ -1,26 +1,13 @@
 import React, { useState } from "react";
 import { Route } from "react-router-dom";
-import MovieList from "./components/Main-Movie-List.js";
+import MovieList from "./components/MovieList.js";
 import SavedList from "./components/Saved-list.js";
 
-import "./App.css";
-import MovieDetails from "./components/MovieDetails.js";
+import "./index.css";
 import MoviePageComponent from "./components/MoviePage.js";
 
 const App = () => {
   const [savedMovies, saveNewMovie] = useState([]);
-
-  // const addToSavedList = movie => {
-  //   if (savedMovies.includes(movie)) {
-  //     console.log("it DOES include this movie");
-  //     return;
-  //   } else {
-  //     const newSavedList = [movie, ...savedMovies];
-  //     console.log(savedMovies.includes(movie));
-  //     saveMovie(newSavedList);
-  //     // saveMovie([...savedMovies, movie]);
-  //   }
-  // };
 
   const saveMovie = movie => {
     saveNewMovie(savedMovies => [...savedMovies, movie]);
