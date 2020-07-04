@@ -19,7 +19,7 @@
   border: 1px solid darkblue;
 }
 .home-button {
-  border: 1px solid darkblue;
+  /* border: 1px solid darkblue; */
   box-sizing: border-box;
   padding: 2% 2% 1.75% 2%;
   text-decoration: none;
@@ -37,4 +37,19 @@
 .movie-details-individual-container {
   width: 30%;
   margin-bottom: 2%;
+}
+
+.movie-page-inner-container {
+  width: 70%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  border: 1px solid darkcyan;
+  box-sizing: border-box;
+  padding: 1% 2% 3% 2%;
+}
+.movie-page-outer-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 }

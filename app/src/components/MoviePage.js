@@ -38,21 +38,22 @@ const MoviePageComponent = props => {
   }, []);
 
   return (
-    <div className="movie-page-container">
-      Smoke test!
-      <h3>{title}</h3>
-      <div>
-        Directed By: <em>{director}</em>
-      </div>
-      <div>Metascore: {metascore}</div>
-      <div>
-        Starring:
+    <div className="movie-page-outer-container">
+      <div className="movie-page-inner-container">
+        <h3 className="movie-page-title">{title}</h3>
         <div>
-          <StarList stars={stars} />
+          Directed By: <em>{director}</em>
         </div>
-      </div>
-      <div>
-        <button onClick={() => props.saveMovie(movie)}>Save</button>
+        <div>Metascore: {metascore}</div>
+        <div>
+          Starring:
+          <div>
+            <StarList stars={stars} />
+          </div>
+        </div>
+        <div>
+          <button onClick={() => props.saveMovie(movie)}>Save</button>
+        </div>
       </div>
     </div>
   );
