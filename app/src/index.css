@@ -1,6 +1,8 @@
 .main-background {
   background-color: #a1cff5;
 }
+
+/* **************** SAVED LIST COMPONENT ************** */
 .saved-list-outer-container {
   display: flex;
   flex-flow: row nowrap;
@@ -34,6 +36,7 @@
   color: white;
 }
 
+/* ****************** MAIN MOVIE LIST / HOME *************** */
 .movie-card {
   width: 100%;
   border: 1px solid darkblue;
@@ -56,12 +59,15 @@
   margin-bottom: 2%;
 }
 
+/* ****************** MOVIE PAGE COMPONENT ************* */
 .movie-page-inner-container {
   width: 70%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  border: 1px solid darkcyan;
+  border-radius: 15px;
+  /* border: 1px solid darkcyan; */
+  background-color: #c4def5;
   box-sizing: border-box;
   padding: 1% 2% 3% 2%;
 }
@@ -69,6 +75,4 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-}
-.movie-page-title {
 }
