@@ -14,7 +14,7 @@ const App = () => {
   };
 
   const Wrapper = () => (
-    <div>
+    <div className="main-background">
       <Route
         path="/"
         render={props => {
