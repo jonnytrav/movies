@@ -11,7 +11,7 @@ const MovieDetails = ({ movie }) => {
     return (
       <div className="movie-card">
         <Link to={`/movie/${id}`} className="movie-title ">
-          {title}
+          <h2>{title}</h2>
         </Link>
         <div className="movie-director">
           Director: <em>{director}</em>
@@ -19,7 +19,7 @@ const MovieDetails = ({ movie }) => {
         <div className="movie-metascore">
           Metascore: <strong>{metascore}</strong>
         </div>
-        <h3>Actors</h3>
+        <h3>Actors:</h3>
 
         {stars.map(star => {
           console.log("star", star);

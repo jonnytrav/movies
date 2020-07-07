@@ -1,8 +1,14 @@
+.main-background {
+  background-color: #a1cff5;
+}
+
+/* **************** SAVED LIST COMPONENT ************** */
 .saved-list-outer-container {
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
-  border: 1px solid darkblue;
+  background-color: #c4def5;
+  /* border: 1px solid darkblue; */
   box-sizing: border-box;
   padding: 3%;
   margin: 0.7% 0% 1% 0%;
@@ -10,24 +16,38 @@
 .saved-list-inner-container {
   width: 70%;
 }
-.home-button-container {
+.home-button-outer-container {
   width: 28.5%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  border: 1px solid darkblue;
-}
-.home-button {
   /* border: 1px solid darkblue; */
+  border: 1px solid #a1cff5;
+  background-color: #a1cff5;
+  border-radius: 10px;
+}
+.home-button-inner-container {
   box-sizing: border-box;
   padding: 2% 2% 1.75% 2%;
+}
+.home-button {
   text-decoration: none;
+  color: white;
 }
 
+/* ****************** MAIN MOVIE LIST / HOME *************** */
 .movie-card {
   width: 100%;
   border: 1px solid darkblue;
+  background-color: #c4def5;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 5%;
+}
+.movie-title {
+  text-decoration: none;
+  color: white;
 }
 .movie-details-container {
   display: flex;
@@ -39,12 +59,15 @@
   margin-bottom: 2%;
 }
 
+/* ****************** MOVIE PAGE COMPONENT ************* */
 .movie-page-inner-container {
   width: 70%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  border: 1px solid darkcyan;
+  border-radius: 15px;
+  /* border: 1px solid darkcyan; */
+  background-color: #c4def5;
   box-sizing: border-box;
   padding: 1% 2% 3% 2%;
 }
