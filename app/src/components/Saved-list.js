@@ -12,9 +12,11 @@ const SavedList = props => {
           </Link>
         ))}
       </div>
-      <div className="home-button-container">
-        <div className="home-button">
-          <Link to="/">Home</Link>
+      <div className="home-button-outer-container">
+        <div className="home-button-inner-container">
+          <Link to="/" className="home-button">
+            Home
+          </Link>
         </div>
       </div>
     </div>

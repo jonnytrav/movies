@@ -14,19 +14,24 @@
 .saved-list-inner-container {
   width: 70%;
 }
-.home-button-container {
+.home-button-outer-container {
   width: 28.5%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  border: 1px solid darkblue;
+  /* border: 1px solid darkblue; */
+  border: 1px solid #a1cff5;
+  background-color: #a1cff5;
   border-radius: 10px;
 }
-.home-button {
+.home-button-inner-container {
   box-sizing: border-box;
   padding: 2% 2% 1.75% 2%;
+}
+.home-button {
   text-decoration: none;
+  color: white;
 }
 
 .movie-card {
